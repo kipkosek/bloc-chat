@@ -1,2 +1,4 @@
-<h1>{{ home.title }}</h1>
-Hello
+<section class="room-list">
+  <h1 class="title">{{ home.title }}</h1>
+  <h2 class="room-name" ng-repeat="room in home.rooms">{{ room.name }}</h2>
+</section>

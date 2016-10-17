@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
 </head>
 <body>
     <ui-view></ui-view>
@@ -26,6 +26,7 @@
         firebase.initializeApp(config);
     </script>
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/Room.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
 </body>
 </html>
