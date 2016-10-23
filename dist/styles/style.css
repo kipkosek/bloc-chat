@@ -27,3 +27,23 @@ body {
     font-family: "Avenir", sans-serif;
     color: rgb(252, 207, 14);
 }
+
+.current-room {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 30%;
+    background-color: rgb(252, 207, 14);
+    padding-left: 1em;
+}
+
+.current-room-name {
+    font-family: "Avenir", sans-serif;
+    color: rgb(43, 42, 40);
+}
+
+.current-messages {
+    font-family: "Avenir", sans-serif;
+    color: rgb(43, 42, 40);
+}
