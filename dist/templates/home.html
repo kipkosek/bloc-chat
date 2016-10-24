@@ -14,9 +14,12 @@
 
 <section class="current-room">
     <h2 class="current-room-name">{{ home.currentRoom.name }}</h2>
-    <h3 class="current-messages"
-        ng-repeat="message in home.messages">
-        {{ message.text }}
-    </h3>
-
+    <table class="message-list" ng-repeat="message in home.messages">
+        <tr class="message-username">
+            <td>{{ message.username }}</td>
+        </tr>
+        <tr class="message-text">
+            <td>{{ message.text }}</td>
+        </tr>
+    </table>
 </section>

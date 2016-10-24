@@ -47,3 +47,16 @@ body {
     font-family: "Avenir", sans-serif;
     color: rgb(43, 42, 40);
 }
+
+.message-list {
+    font-family: "Avenir", sans-serif;
+    color: rgb(43, 42, 40);
+}
+
+.message-username {
+    font-weight: bold;
+}
+
+.message-text {
+    border-bottom: 1px solid rgb(43, 42, 40);
+}
