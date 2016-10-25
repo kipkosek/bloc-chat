@@ -9,8 +9,8 @@
 
         ctrl.open = function() {
             $uibModal.open({
-                templateUrl: '/templates/modal.html',
-                controller: 'ModalCtrl as modal'
+                templateUrl: '/templates/modalroom.html',
+                controller: 'ModalRoomCtrl as modalroom'
             });
         };
 

@@ -10,6 +10,8 @@
         return $firebaseArray(messageRef.orderByChild("roomId").equalTo(currentRoomId));
     };
 
+// Firebase.ServerValue.TIMESTAMP
+
     return MessageService;
   }
 

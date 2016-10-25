@@ -12,14 +12,19 @@
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             })
-            .state('modal', {
+            .state('modalroom', {
                 url: '/',
-                controller: 'ModalCtrl as modal',
-                templateUrl: '/templates/modal.html'
+                controller: 'ModalRoomCtrl as modalroom',
+                templateUrl: '/templates/modalroom.html'
+            })
+            .state('modaluser', {
+                url: '/',
+                controller: 'ModalUserCtrl as modaluser',
+                templateUrl: '/templates/modaluser.html'
             });
     }
 
     angular
-        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
         .config(config);
 })();
