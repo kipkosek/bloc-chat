@@ -1,7 +1,7 @@
 <div class="modal-dialog" role="document">
     <div class="modal-header">
         <h3>Set a Username</h3>
-        <div class="alert alert-danger">{{ errorMessage }}</div>
+        <div class="alert alert-danger" ng-show="errorMessage">{{ errorMessage }}</div>
     </div>
     <div class="modal-body">
         <label>This name will appear when you send messages.</label>

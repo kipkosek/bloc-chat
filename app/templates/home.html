@@ -1,4 +1,4 @@
-<section class="room-list">
+<aside class="room-list">
     <h1 class="title">{{ home.title }}</h1>
 
     <div class="button-new-room">
@@ -10,16 +10,26 @@
         ng-click="home.setRoom(room)">
         {{ room.name }}
     </h2>
-</section>
+</aside>
 
 <section class="current-room">
-    <h2 class="current-room-name">{{ home.currentRoom.name }}</h2>
-    <table class="message-list" ng-repeat="message in home.messages">
-        <tr class="message-username">
-            <td>{{ message.username }}</td>
-        </tr>
-        <tr class="message-text">
-            <td>{{ message.text }}</td>
-        </tr>
-    </table>
+    <h1 class="current-room-name">{{ home.currentRoom.name }}</h1>
+    <div class="message-list" ng-repeat="message in home.messages">
+        <div class="message-username">{{ message.username }}</div>
+        <div class="message-created-at">{{ message.createdAt | date : 'short' : '-0400' }}</div>
+        <div class="message-text">{{ message.text }}</div>
+    </div>
 </section>
+
+<section class="message-input" ng-show="home.currentRoom">
+    <div class="message-interface">
+        <label>Say something!</label>
+        <input class="message-box" placeholder="Type your message here" type="text" ng-model="message.text">
+        <button class="btn btn-primary" ng-click="home.sendMessage(message)" type="submit">Send</button>
+    </div>
+</section>
+
+<!-- <div class="col-xs-4">
+        <label for="ex3">col-xs-4</label>
+        <input class="form-control" id="ex3" type="text">
+      </div> -->
