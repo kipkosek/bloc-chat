@@ -29,7 +29,8 @@
     </div>
 </section>
 
-<!-- <div class="col-xs-4">
-        <label for="ex3">col-xs-4</label>
-        <input class="form-control" id="ex3" type="text">
-      </div> -->
+<aside class="user-online">
+    <div class="user-title">Active Users</div>
+    <div class="user-names" ng-repeat="user in home.users">{{ user.$value }}</div>
+    <button class="btn" ng-click="home.disconnect()">Log Out</button>
+</aside>

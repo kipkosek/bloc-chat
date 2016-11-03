@@ -4,7 +4,6 @@
 
         ctrl.createRoom = function(room) {
             RoomService.addRoom(room);
-            console.log(room);
             $uibModalInstance.close();
         };
         ctrl.cancel = function() {

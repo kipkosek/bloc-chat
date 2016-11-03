@@ -31,9 +31,9 @@ body {
 .current-room {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 10%;
     bottom: 0;
-    left: 30%;
+    left: 20%;
     background-color: rgb(252, 207, 14);
     padding-left: 1em;
 }
@@ -74,7 +74,7 @@ body {
     top: 90%;
     right: 0;
     bottom: 0;
-    left: 30%;
+    left: 20%;
     padding-left: 1em;
     color: rgb(43, 42, 40);
 }
@@ -86,4 +86,28 @@ body {
 label {
     font-family: "Avenir", sans-serif;
     font-size: 125%;
+}
+
+.user-online {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 90%;
+  background-color: rgb(43, 42, 40);
+  padding-left: 1em;
+}
+
+.user-title {
+    font-family: "Avenir", sans-serif;
+    color: rgb(252, 207, 14);
+    font-size: 150%;
+    border-bottom: 1px solid rgb(252, 207, 14);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.user-names {
+    font-family: "Avenir", sans-serif;
+    color: rgb(252, 207, 14);
 }

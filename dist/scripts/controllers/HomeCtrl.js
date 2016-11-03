@@ -1,11 +1,12 @@
 (function() {
-    function HomeCtrl($uibModal, RoomService, MessageService, $cookies) {
+    function HomeCtrl($uibModal, RoomService, MessageService, UserService, $cookies) {
         var ctrl = this;
 
         ctrl.title = "Bloc Chat";
         ctrl.rooms = RoomService.all;
         ctrl.currentRoom = null;
         ctrl.messages = null;
+        ctrl.users = UserService.all;
 
         ctrl.open = function() {
             $uibModal.open({
@@ -16,9 +17,7 @@
 
         ctrl.setRoom = function(room) {
             ctrl.currentRoom = room;
-            console.log(room.name);
             ctrl.messages = MessageService.getByRoomId(room.$id);
-            console.log(ctrl.messages);
         };
 
         ctrl.sendMessage = function(message) {
@@ -26,9 +25,13 @@
             message.roomId = ctrl.currentRoom.$id;
             MessageService.send(message);
         };
+
+        ctrl.disconnect = function() {
+            UserService.disconnect();
+        };
     }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['$uibModal', 'RoomService', 'MessageService', '$cookies', HomeCtrl]);
+        .controller('HomeCtrl', ['$uibModal', 'RoomService', 'MessageService', 'UserService', '$cookies', HomeCtrl]);
 })();

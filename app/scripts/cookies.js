@@ -1,5 +1,5 @@
 (function() {
-    function BlocChatCookies($cookies, $uibModal) {
+    function BlocChatCookies($cookies, $uibModal, UserService) {
         var currentUser = $cookies.get('blocChatCurrentUser');
 
         if (!currentUser || currentUser === '') {
@@ -10,6 +10,7 @@
                     $scope.setUser = function(username) {
                         if (username && username !== '') {
                             $cookies.put('blocChatCurrentUser', username);
+                            UserService.connect(username);
                             $uibModalInstance.close();
                         } else {
                             $scope.errorMessage = "Invalid Username";
@@ -22,5 +23,5 @@
 
     angular
         .module('blocChat')
-        .run(['$cookies', '$uibModal', BlocChatCookies]);
+        .run(['$cookies', '$uibModal', 'UserService', BlocChatCookies]);
 })();
