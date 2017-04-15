@@ -1,3 +1,3 @@
-## Bloc Chat
+# Bloc Chat
 
-Instant messaging app using Angular 1.
+Instant messaging app using Angular 1 and Firebase.
